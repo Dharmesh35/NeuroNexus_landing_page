@@ -41,3 +41,91 @@
 .apply_hover:hover {
   z-index: 9;
 } */
+
+.part_two {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+}
+
+.box1 {
+  grid-column: span 1;
+}
+.box2 {
+  grid-column: span 1;
+}
+.box3 {
+  grid-column: span 2;
+}
+
+.general_box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1px;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+  position: relative;
+  overflow: hidden;
+}
+
+.general_box::before,
+.general_box > .box_border {
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 500ms;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.general_box::before {
+  background: radial-gradient(
+    900px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.1),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.general_box > .box_border {
+  background: radial-gradient(
+    450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.3),
+    transparent 40%
+  );
+  z-index: -1;
+}
+.general_box:hover::before,
+.general_box:hover > .box_border {
+  opacity: 1;
+}
+
+.general_box > .box_content {
+  background-color: var(--box-color);
+  border-radius: 8px;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  position: relative;
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  gap: 1rem;
+  padding: 1rem;
+  line-height: 30px;
+  font-size: 1.05rem;
+}
+.box_heading {
+  font-size: 1.3rem;
+}
+.box_content > div > span {
+  display: block;
+  font-weight: 900;
+  margin-top: 15px;
+  font-size: 2.3rem;
+}

@@ -4,6 +4,7 @@
   --black: #1d1d1d;
   --grey: #313638;
   --transparent: rgba(0, 0, 0, 0.1);
+  --box-color: rgba(23, 23, 23);
 }
 
 *,
@@ -121,4 +122,25 @@ body {
 
 .fa-arrow-right {
   transform: rotate(-45deg);
+}
+
+.fa-arrow-down {
+  /* position: absolute; */
+  scale: 1.5;
+  /* margin-top: 5rem; */
+  bottom: 5%;
+  left: 50%;
+  animation: updown 2s infinite forwards;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
 }
