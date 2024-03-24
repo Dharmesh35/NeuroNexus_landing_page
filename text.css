@@ -1,0 +1,43 @@
+.main {
+  height: 100vh;
+}
+.poppins {
+  font-family: Poppins;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  font-family: Poppins;
+  gap: 2rem;
+}
+
+.heading {
+  font-size: 10rem;
+}
+.small_heading {
+  font-size: 1.4rem;
+  letter-spacing: 0.5rem;
+}
+
+/* Simple buttom CSS */
+
+/* .apply_button {
+  font-size: 1.3rem;
+  padding: 10px 40px;
+  background-color: #ffffff;
+  color: var(--black);
+  display: inline-block;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.apply_hover {
+  transition: ease 2s;
+}
+.apply_hover:hover {
+  z-index: 9;
+} */
