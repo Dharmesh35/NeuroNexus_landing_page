@@ -10,43 +10,35 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
+  font-weight: 500;
   font-family: Poppins;
   gap: 2rem;
+  position: relative;
 }
 
 .heading {
-  font-size: 10rem;
+  /* font-size: 10rem; */
+  font-size: clamp(60px, 15vw, 160px);
 }
 .small_heading {
   font-size: 1.4rem;
   letter-spacing: 0.5rem;
 }
 
-/* Simple buttom CSS */
-
-/* .apply_button {
-  font-size: 1.3rem;
-  padding: 10px 40px;
-  background-color: #ffffff;
-  color: var(--black);
-  display: inline-block;
-  border-radius: 10px;
-  cursor: pointer;
+.part_two_sec {
+  display: flex;
+  justify-content: center;
+  background-color: var(--black);
+  padding: 5rem 0rem;
 }
-
-.apply_hover {
-  transition: ease 2s;
-}
-.apply_hover:hover {
-  z-index: 9;
-} */
 
 .part_two {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
-  padding: 2rem;
+  height: 80vh;
+  width: 80vw;
 }
 
 .box1 {
@@ -128,4 +120,110 @@
   font-weight: 900;
   margin-top: 15px;
   font-size: 2.3rem;
+}
+
+.part_three {
+  height: 100vh;
+  color: var(--white);
+  position: relative;
+  padding-top: 5rem;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to top,
+    var(--transparent) 10%,
+    var(--black)
+  );
+}
+.intern_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.intern_content > .intern_heading > span {
+  display: block;
+  font-weight: 900;
+  font-size: 5rem;
+  background-image: linear-gradient(
+    45deg,
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+  background-size: 100%;
+  background-clip: text;
+  background-repeat: repeat;
+  -webkit-text-fill-color: transparent;
+}
+
+.intern_content > .intern_heading > span:hover {
+  animation: rainbow-text-simple-animation 0.75s ease forwards;
+}
+
+.intern_content > .intern_heading > span:not(:hover) {
+  animation: return-to-original 0.75s ease forwards;
+}
+
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}
+
+@keyframes return-to-original {
+  0% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+.intern_heading {
+  display: block;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  line-height: 80px;
+  position: relative;
+  font-size: 1.7rem;
+}
+
+.intern_body {
+  font-family: poppins;
+  position: absolute;
+  width: 50%;
+  margin: auto;
+  padding: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 50px;
+  top: 30%;
+  left: 25%;
+}
+
+.intern_body::before {
+  content: "";
+  position: absolute;
+  z-index: -9;
+  width: 100%;
+  height: 100%;
+  background: #ffffff15;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  left: 0%;
+  top: 0%;
 }
