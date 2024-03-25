@@ -195,6 +195,27 @@ body {
   }
 }
 
+.socials {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.icon {
+  font-size: 2rem;
+  border: 2px solid var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.icon:hover {
+  transform: translateY(-5px);
+}
+
 @media only screen and (max-width: 1128px) {
   .general_img_box {
     width: 20%;
