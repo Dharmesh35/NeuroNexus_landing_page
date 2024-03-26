@@ -239,14 +239,9 @@ body {
     top: 40% !important;
     left: 10% !important;
   }
-  .part_two {
-    display: flex !important;
-    flex-direction: column;
-    flex-flow: wrap;
-    overflow: auto;
-  }
-  .part_two_sec {
-    height: auto;
+  .box1,
+  .box2 {
+    grid-column: span 2 !important;
   }
 }
 

@@ -37,13 +37,10 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
-  height: 80vh;
   width: 80vw;
 }
 
-.box1 {
-  grid-column: span 1;
-}
+.box1,
 .box2 {
   grid-column: span 1;
 }
